@@ -16,6 +16,7 @@ let recordSequence = [];
 let speed = 1000;
 let loopInterval = 1000;
 const speedLabel = document.getElementById("speedLabel")
+let interval = setInterval(() => {} , 1000);
 
 play = (i) => {
     if (recording) {
@@ -26,7 +27,7 @@ play = (i) => {
 }
 playSequence = () => {
     if (!playing)
-        return;
+    return;
     recording = false;
     for (let i = 0; i <= recordSequence.length; i++) {
         setTimeout(() => {
@@ -34,15 +35,16 @@ playSequence = () => {
         }, speed * i);
     }
 }
-setInterval(playSequence, loopInterval);
 startLoop = () => {
     playing = true;
     recording = false;
     calcIntervalDelay();
+    playSequence();
 }
 endLoop = () => {
     playing = false;
     recording = false;
+    calcInterval();
 }
 record = () => {
     recordSequence = [];
@@ -53,7 +55,7 @@ displayLabel = () => {
 }
 faster = () => {
     if (speed == 100)
-        return;
+    return;
     speed -= 100;
     calcIntervalDelay();
     displayLabel();
@@ -69,5 +71,7 @@ normalSpeed = () => {
     calcIntervalDelay();
 }
 calcIntervalDelay = () => {
-    // loopInterval = speed * recordSequence.length;
+    clearInterval(interval);
+    loopInterval = speed * recordSequence.length;
+    interval = setInterval(playSequence, loopInterval);
 }
