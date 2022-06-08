@@ -1,13 +1,13 @@
 const sounds = [
-new Audio("./assets/sounds/boom.wav"),
-new Audio("./assets/sounds/clap.wav"),
-new Audio("./assets/sounds/hihat.wav"),
-new Audio("./assets/sounds/kick.wav"),
-new Audio("./assets/sounds/openhat.wav"),
-new Audio("./assets/sounds/ride.wav"),
-new Audio("./assets/sounds/snare.wav"),
-new Audio("./assets/sounds/tink.wav"),
-new Audio("./assets/sounds/tom.wav")
+    new Audio("./assets/sounds/boom.wav"),
+    new Audio("./assets/sounds/clap.wav"),
+    new Audio("./assets/sounds/hihat.wav"),
+    new Audio("./assets/sounds/kick.wav"),
+    new Audio("./assets/sounds/openhat.wav"),
+    new Audio("./assets/sounds/ride.wav"),
+    new Audio("./assets/sounds/snare.wav"),
+    new Audio("./assets/sounds/tink.wav"),
+    new Audio("./assets/sounds/tom.wav")
 ]
 
 let recording = false;
@@ -46,8 +46,8 @@ record = () => {
     recordSequence = [];
     recording = true;
 }
-displayLabel = () =>{
-    speedLabel.innerHTML = `Delay: ${speed/1000}s`;
+displayLabel = () => {
+    speedLabel.innerHTML = `Delay: ${speed / 1000}s`;
 }
 faster = () => {
     if (speed == 100)
