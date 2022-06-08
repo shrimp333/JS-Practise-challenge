@@ -1,13 +1,13 @@
 const sounds = [
-    new Audio("./assets/sounds/boom.wav"),
-    new Audio("./assets/sounds/clap.wav"),
-    new Audio("./assets/sounds/hihat.wav"),
-    new Audio("./assets/sounds/kick.wav"),
-    new Audio("./assets/sounds/openhat.wav"),
-    new Audio("./assets/sounds/ride.wav"),
-    new Audio("./assets/sounds/snare.wav"),
-    new Audio("./assets/sounds/tink.wav"),
-    new Audio("./assets/sounds/tom.wav")
+    "./assets/sounds/boom.wav",
+    "./assets/sounds/clap.wav",
+    "./assets/sounds/hihat.wav",
+    "./assets/sounds/kick.wav",
+    "./assets/sounds/openhat.wav",
+    "./assets/sounds/ride.wav",
+    "./assets/sounds/snare.wav",
+    "./assets/sounds/tink.wav",
+    "./assets/sounds/tom.wav"
 ]
 
 let recording = false;
@@ -20,7 +20,8 @@ play = (i) => {
     if (recording) {
         recordSequence.push(i);
     }
-    sounds[i].play();
+    sound = new Audio(sounds[i]);
+    sound.play();
 }
 playSequence = () => {
     if (!playing)
