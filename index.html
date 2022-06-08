@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Drumkit</h1>
+    <p id="speedLabel">Delay: 1s</p>
+    <div class="playback">
+        <h2>Playback</h2>
+        <button id="play" onclick="playSequence()">Play</button>
+        <button id="stop">Stop</button>
+        <button id="record" onclick="record()">Record</button>
+        <button id="normal" onclick="normalSpeed()">Reset Delay</button>
+        <button id="fast" onclick="faster()">Lower Delay</button>
+        <button id="slow" onclick="slower()">Higher Delay</button>
+    </div>
+    <div class="drumkit">
+        <h2>Drumkit</h2>
+        <button id="boom" onclick="play(0)">Boom</button>
+        <button id="clap" onclick="play(1)">Clap</button>
+        <button id="hihat" onclick="play(2)">Hihat</button>
+        <button id="kick" onclick="play(3)">Kick</button>
+        <button id="openhat" onclick="play(4)">Openhat</button>
+        <button id="ride" onclick="play(5)">Ride</button>
+        <button id="snare" onclick="play(6)">Snare</button>
+        <button id="tink" onclick="play(7)">Tink</button>
+        <button id="tom" onclick="play(8)">Tom</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
